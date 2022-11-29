@@ -1,0 +1,20 @@
+<div class="file-create-edit">
+  <div class="file-create-edit__content-wrapper">
+    <form
+      class="file-create-edit__form"
+      #form="ngForm"
+      name="form"
+      novalidate
+      (ngSubmit)="form.valid && uploadFile()">
+      <app-file-input
+        accept="text/plain"
+        [shouldShowTextContent]="true"
+        [(ngModel)]="fileToUpload"
+        name="respondentsListFile"
+        id="respondentsListFile"
+      >
+
+      </app-file-input>
+    </form>
+  </div>
+</div>

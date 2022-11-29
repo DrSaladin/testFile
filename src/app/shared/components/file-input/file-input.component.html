@@ -1,0 +1,52 @@
+<div class="file-input">
+  <div
+    (fileDropped)="onFileDropped($event)"
+    *ngIf="canEdit"
+    class="file-input__dropzone"
+    fileDragDrop>
+    <div class="file-input__info-block">
+      <p class="file-input__dropzone-manual">
+        Drag & Drop or click to select <span class="file-input__dropzone-manual-important">single</span> file
+      </p>
+      <p class="file-input__dropzone-info">
+        Please note! Only the last dropped or selected file is uploaded
+      </p>
+    </div>
+    <input
+      class="file-input__dropzone-file-input"
+      type="file"
+      id="{{ fileId }}"
+      accept="{{ accept }}"
+      #fileInput
+      (click)="onFileAreaClick()"
+      (change)="fileChange($event)"
+    />
+  </div>
+  <ul class="file-input__files-list">
+    <li
+      *ngIf="showFilePreview"
+      class="file-input__files-list-item"
+    >
+      <div class="file-input__file-info-wrapper">
+        <div class="file-input__file-info">
+          <p class="file-input__file-name-label" *ngIf="showFileNameLabel">File name</p>
+          <p>{{uploadedFileName}}</p>
+          <p class="file-input__fileSize-info b-text--small"
+            *ngIf="showFileSize"
+          >
+            {{ uploadedFileSize }}
+          </p>
+        </div>
+        <button
+          (click)="wipeFile()"
+          pButton class="p-button-text p-button-rounded p-button-danger"
+          type="button"
+          icon="pi pi-times-circle">
+        </button>
+      </div>
+    </li>
+  </ul>
+  <div class="file-input__text-content" *ngIf="showFilePreview && shouldShowTextContent && uploadedFileSize">
+    {{fileReaderText}}
+  </div>
+</div>

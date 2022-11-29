@@ -1,0 +1,436 @@
+/** Hide elements */
+.hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+/** Break by words */
+.on-word-breaker() {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  white-space: normal;
+  max-width: 100%;
+}
+
+.daysLeftBadge() {
+  font-weight: @semiBoldFontWeight;
+  .minorFontSize;
+  color: @GreyBlue;
+  padding: 2px 7px;
+  background: @LightSnowGrey;
+  border: 1px solid @GreyBlue;
+  border-radius: 4px;
+  &--warning {
+    background: @BrownWhite;
+    color: @DrakulaRed;
+    border-color: @DrakulaRed;
+  }
+}
+
+/** Basic style for app menu item icon */
+.menuItemIcon() {
+  background-repeat: no-repeat;
+  background-position: center center;
+  display: block;
+  width: 24px;
+  height: 24px;
+}
+
+.afterNBeforeMain() {
+  content: '';
+  position: absolute;
+}
+
+/** Break by letter */
+.on-letter-breaker() {
+  overflow-wrap: break-word;
+  word-break: break-all;
+  white-space: normal;
+  max-width: 100%;
+  background-repeat: no-repeat;
+}
+
+// Style for empty list warning
+.emptyListIcon() {
+  min-height: 290px;
+  padding: 75px;
+  display: flex;
+  justify-content: center;
+}
+
+.emptyListIconWrapper() {
+  background-image: @EmptyListCommonIcon;
+  font-size: @standardFontSize;
+  line-height: @upperLineHeight;
+  width: 190px;
+  height: 155px;
+  background-repeat: no-repeat;
+  text-align: center;
+  background-position: 50% 5%;
+  .flexColumn;
+  justify-content: flex-end;
+  font-family: @font-family-apple;
+}
+// Style for empty list warning
+
+// Reset styles for autocomplete
+.autocompleteResetStyle() {
+  :host ::ng-deep .p-autocomplete-dd .p-autocomplete-dropdown {
+    background: transparent;
+    color: @Grayish;
+    width: 2.357rem;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    border: 1px solid @CyanBlueShade;
+    border-left: none;
+  }
+
+  :host ::ng-deep .p-autocomplete-dd .p-autocomplete-input {
+    border-right: none;
+  }
+
+  :host ::ng-deep .p-autocomplete .p-button:focus,
+  :host ::ng-deep .p-inputtext:enabled:focus {
+    box-shadow: none;
+  }
+
+  :host ::ng-deep .p-inputtext:enabled:focus + button {
+    box-shadow: none;
+    border-left: none;
+    border-color: @AzureBlue;
+  }
+
+  :host ::ng-deep .p-inputtext:enabled:hover + button {
+    border-color: @AzureBlue;
+  }
+
+  :host ::ng-deep p-autocomplete.ng-dirty.ng-invalid > .p-autocomplete > .p-inputtext {
+    border-color: @CyanBlueShade;
+  }
+
+  :host ::ng-deep p-autocomplete.ng-dirty.ng-invalid > .p-autocomplete > .p-inputtext:hover .p-inputtext:hover + button {
+    border-color: @AzureBlue;
+  }
+  :host ::ng-deep p-autocomplete.ng-dirty.ng-invalid > .p-autocomplete .p-button:focus,
+  :host ::ng-deep p-autocomplete.ng-dirty.ng-invalid > .p-autocomplete .p-inputtext:enabled:focus {
+    border-color: @AzureBlue;
+  }
+
+  :host ::ng-deep p-autocomplete.ng-dirty.ng-invalid > .p-autocomplete > .p-inputtext:enabled:hover {
+    border-color: @AzureBlue;
+  }
+}
+// Reset styles for autocomplete
+
+// Reset style for text span in lists
+.datapickerSpanStyle() {
+  width: 2rem;
+  height: 2rem;
+}
+// Reset style for text span in lists
+
+// Reset multiselect placeholder in filter
+.filterMultiselectPlaceholder() {
+  font-family: @font-family-apple;
+  font-size: @standardFontSize;
+  line-height: @standardLineHeight;
+  color: @Gray;
+}
+// Reset multiselect placeholder in filter
+
+// Reset list td
+.listTdStyle() {
+  border: 4px solid @LightGray;
+  border-width: 0 0 4px 0;
+  padding: 1rem;
+  font-family: @font-family-apple;
+  font-size: @standardFontSize;
+  line-height: @standardLineHeight;
+  color: @AshedDarkGray;
+  cursor: pointer;
+}
+// Reset list td
+
+// Application state
+.applicationState() {
+  color: @DrakulaRed;
+  background-color: @LightTomatoRed;
+  border: 1px solid @DrakulaRed;
+  padding: .25em .5rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 11px;
+  letter-spacing: .3px;
+  border-radius: 4px;
+  font-family: @font-family-apple;
+  vertical-align: bottom;
+}
+// Application state
+
+// Reset confirm modal styles
+.confirmModalStyle() {
+  .afterNBeforeMain;
+  width: 435px;
+  height: 160px;
+  background-image: @SubmitIcon;
+  background-repeat: no-repeat;
+  background-position: center center;
+  top: 70px;
+  left: 50px;
+}
+// Reset confirm modal styles
+
+// Reset confirm modal message styles
+.confirmModalMessageStyle() {
+  width: 100%;
+  position: relative;
+  text-align: center;
+}
+// Reset confirm modal message styles
+
+//Reset list header style
+.listHeaderStyle() {
+  font-weight: @semiBoldFontWeight;
+  font-size: @upperFontSize;
+  line-height: @upperLineHeight;
+  color: @AshedDarkGray;
+  padding: 1rem 1.5rem;
+  text-align: center;
+  font-family: @font-family-apple;
+  border-bottom: @LightAshedGray solid 1px;
+}
+//Reset list header style
+
+//Reset list header style
+.listHeaderTextStyle() {
+  font-family: @font-family-apple;
+  font-weight: @semiBoldFontWeight;
+  font-size: 18px;
+  line-height: 23px;
+  margin: 0 20px 0 0;
+}
+//Reset list header style
+
+//Reset list content area
+.listContentAreaStyle() {
+  position: relative;
+  min-height: 220px;
+  min-width: 915px;
+}
+//Reset list content area
+
+// Reset list total count style
+.listTotalCountStyle() {
+  font-size: @standardFontSize;
+  line-height: 30px;
+  color: @AshedGray;
+  font-family: @font-family-apple;
+}
+// Reset list total count style
+
+// Reset filter item and  item label style
+.filterItemLabelStyle() {
+  font-weight: @semiBoldFontWeight;
+  font-size: @standardFontSize;
+  line-height: @standardLineHeight;
+  color: @AshedDarkGray;
+  margin: 0;
+  font-family: @font-family-apple;
+}
+.filterItemWrapperStyle() {
+  padding: 0.5rem 1.5rem;
+  margin-bottom: 0.5rem;
+}
+// Reset filter item and item label style
+.dataPickerMainElementPadding() {
+  :host ::ng-deep .p-datepicker {
+    padding: 5px;
+  }
+}
+// Reset filter item and item label style
+
+// Code badge style
+.codeBadgeStyle() {
+  padding: .25em .5rem;
+  text-transform: uppercase;
+  font-family: @font-family-apple;
+  font-weight: 700;
+  font-size: @lowerFontSize;
+  letter-spacing: .3px;
+  border-radius: 4px;
+  border: 1px solid @Gray;
+  display: inline-block;
+}
+// Code badge style
+
+// Positioning filters management buttons
+.filterManagementButtons() {
+  &--reset {
+    color:  @AzureBlue;
+    box-shadow: none!important;
+  }
+  &--apply {
+    margin-right: 15px;
+    background: @AzureBlue;
+    box-shadow: none!important;
+  }
+}
+// Positioning filters management buttons
+
+// Padding for modal dialog for adding respondents
+.addRespondentModalDialogPadding() {
+  padding: 30px;
+}
+// Padding for modal dialog for adding respondents
+
+// Set style for name and version name in pending my-forms list and my-forms list
+.setStyleForName() {
+  margin-bottom: 5px;
+}
+
+.setStyleForVersionName() {
+  margin-bottom: 0;
+  font-weight: @semiBoldFontWeight;
+  .minorFontSize;
+  color: @Gray;
+  font-family: @font-family-apple;
+}
+// Set style for name and version name in pending my-forms list and my-forms list
+
+// Set style for minor font size
+.minorFontSize() {
+  font-size: @lowerFontSize;
+  line-height: @lowerLineHeight;
+}
+// Set style for minor font size
+
+// Status badge style
+
+.consentStatus() {
+  display: inline-block;
+  text-align: center;
+  width: max-content;
+  padding: .25em .5rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: @lowerFontSize;
+  letter-spacing: .3px;
+  border-radius: 4px;
+  border: 1px solid @Gray;
+  font-family: @font-family-apple;
+  min-width: 100px;
+}
+
+.consentStatusGiven() {
+  color: @LightGrasGreen;
+  border: 1px solid @LightGrasGreen;
+  background-color: @WhiteAshedGray;
+}
+
+.consentStatusUngiven() {
+  color: @DrakulaRed;
+  background-color: @BrownWhite;
+  border: 1px solid @DrakulaRed;
+}
+
+.consentStatusWithdraw() {
+  color: @Gray;
+  background-color: @LightGray;
+  border: 1px solid @Gray;
+}
+
+// Status badge style
+
+// Set style flex-column
+.flexColumn() {
+  display: flex;
+  flex-direction: column;
+}
+// Set style flex-column
+
+// Set style flex-row
+.flexRow() {
+  display: flex;
+  flex-direction: row;
+}
+// Set style flex-row
+
+// Set style for standard flex
+.flexBetweenAlignCenter() {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+// Set style for standard flex
+
+// Set style for flex align - center
+.flexAlignCenter() {
+  display: flex;
+  align-items: center;
+}
+// Set style for flex align - center
+
+// restyle default info and outlined buttons style
+.buttonInfo() {
+  background: @AzureBlue;
+  color: @White;
+}
+
+.buttonOutlined() {
+  border-color: @AzureBlue;
+  color: @AzureBlue;
+}
+// restyle default info and outlined buttons style
+
+// NgPrime mixins
+
+.pButtonDisabled() {
+  color: @Grayish;
+  border-color: @Grayish;
+  background: transparent;
+}
+
+// NgPrime mixins
+
+@import 'variables';
+
+.sprite-icon(@column: 0, @row: 0, @size: 0) {
+  background-position: calc(-@size * @column * @icons-scale) calc(-@size * @row * @icons-scale);
+  width: calc(@size * @icons-scale);
+  height: calc(@size * @icons-scale);
+  min-width: calc(@size * @icons-scale);
+  zoom: calc(100% / @icons-scale);
+  -ms-zoom: calc(100% / @icons-scale);
+  -webkit-zoom: calc(100% / @icons-scale);
+  -moz-transform:  scale(calc(1 / @icons-scale));
+  transform:  scale(calc(1 / @icons-scale));
+  -moz-transform-origin: left center;
+}
+
+// Mixin for buttons of "add-by" popups
+.addByButtonsDefaultStyle() {
+  border-color: @AzureBlue;
+  font-weight: @semiBoldFontWeight;
+  font-family: @font-family-apple;
+  font-size: @standardFontSize;
+  line-height: @standardLineHeight;
+  width: 85px;
+}
+
+.addBySubmitButton() {
+  color: @White;
+}
+
+.addByCancelButton() {
+  color: @AzureBlue;
+}
+
+// Mixin for buttons of "add-by" popups

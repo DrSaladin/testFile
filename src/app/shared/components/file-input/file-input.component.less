@@ -1,0 +1,112 @@
+@import (reference) '../../../../styles.less';
+
+.file-input {
+  position: relative;
+  &__dropzone-manual {
+    font-size: @upperFontSize;
+    line-height: @upperLineHeight;
+    font-family: @font-family-apple;
+    margin-bottom: 5px;
+    color: @AshedDarkGray;
+
+    &-important {
+      font-weight: @semiBoldFontWeight;
+    }
+  }
+  &__text-content {
+    max-height: 500px;
+    overflow-y: overlay;
+  }
+  &__info-block {
+    display: flex;
+    flex-direction: column;
+  }
+  &__dropzone-info {
+    font-size: @lowerFontSize;
+    line-height: @lowerLineHeight;
+    font-family: @font-family-apple;
+    color: @AshedGray;
+  }
+  &__dropzone {
+    width: 100%;
+    height: 145px;
+    padding: 8px;
+    text-align: center;
+    border: dashed 2px @FileInputGrayDropZoneGray;
+    border-radius: 2px;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    background-color: @FileInputGrayDropZoneBorderGray;
+    background-image: @IconCloudUpload;
+    background-repeat: no-repeat;
+    background-size: 40px 40px;
+    background-position: center 20px;
+    &-manual {
+      width: 390px;
+      transition: all 1s ease;
+    }
+    &-file-input {
+      opacity: 0;
+      position: absolute;
+      z-index: 3;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      cursor: pointer;
+    }
+    &--fileOn {
+      border: solid 2px @FileInputGrayDropZoneBorderFocusGray;
+      background-color: @FileInputGrayDropZoneFocusGray;
+      background-image: @IconCloudUploadActive;
+    }
+  }
+  &__files-list {
+    padding: 10px 0;
+    margin: 0;
+    &-item {
+      justify-content: center;
+      padding-top: 15px;
+      padding-left: 50px;
+      background-image: @IconUploaderFile;
+      background-repeat: no-repeat;
+      background-position: left 78%;
+      background-size: 50px 50px;
+      .flexAlignCenter;
+      &--image {
+        padding-left: 0;
+        background: none;
+      }
+    }
+  }
+  &__file-info {
+    font-size: @lowerFontSize;
+    line-height: @lowerLineHeight;
+    color: @AshedGray;
+    & p {
+      margin-bottom: 5px;
+    }
+    & p:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+  &__file-name-label {
+    font-weight: @semiBoldFontWeight;
+  }
+  &__file-preview {
+    display: block;
+    max-width: 120px;
+    max-height: 80px;
+    margin-right: 15px;
+  }
+  &__file-info-wrapper {
+    .flexBetweenAlignCenter;
+    flex-grow: 1;
+  }
+  &__fileSize-info {
+    margin: 0;
+  }
+}
